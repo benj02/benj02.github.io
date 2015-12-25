@@ -19,8 +19,8 @@
   });
 
   $(function() {
-    // playVideo("O5RdMvgk8b0", 680);
+    playVideo("O5RdMvgk8b0", 680);
     // playVideo("UpNTwXycNww", 1260);
-    playVideo("UpNTwXycNww", 1480);
+    // playVideo("UpNTwXycNww", 1480);
   });
 })(jQuery);
