@@ -3,6 +3,12 @@ Tutorial Name: Modernize Your Site: Building a YouTube Video Background
 Author: Samuel Dalusung
 */
 
+/* Fix some bullshit */
+#flashAudioObject-container {
+    display: none;
+}
+
+
 
 /* GENERAL STYLES
 ================================================== */
@@ -16,6 +22,7 @@ body {
     padding:0;
     height:100%;
     width:100%;
+    background-color: black;
     -webkit-font-smoothing:antialiased;
     -webkit-text-size-adjust:100%
 }
