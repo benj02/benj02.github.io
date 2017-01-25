@@ -3,7 +3,8 @@ var videos = [
   {id: "O5RdMvgk8b0", times: [200, 600]},
   {id: "UpNTwXycNww", times: [230, 600, 700]},
   {id: "hdGnUnDwO_8", times: [10]},
-  {id: "EJqo90lNYLs", times: [60]}
+  {id: "EJqo90lNYLs", times: [60]},
+  {id: "_hwDdE0Gu4E", times: [10]},
 ];
 
 function pickRandom(array) {
