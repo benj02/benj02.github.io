@@ -1,6 +1,6 @@
 var videos = [
   {id: "T5Ap6rkyBHY", times: [500, 600]},
-  {id: "O5RdMvgk8b0", times: [200, 100]},
+  {id: "O5RdMvgk8b0", times: [200, 600]},
   {id: "UpNTwXycNww", times: [230, 600, 700]},
   {id: "hdGnUnDwO_8", times: [10]}
 ];
