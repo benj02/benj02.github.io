@@ -12,6 +12,7 @@ function pickRandom(array) {
 (function($) {
   var firstVideo = true;
   function playVideo(id, seek) {
+    console.log("playing '" + id + "' at '" + seek + "'");
     if (firstVideo) {
       $("#bgndVideo").YTPlayer({
         videoURL: id,
