@@ -5,6 +5,10 @@ var videos = [
   {id: "hdGnUnDwO_8", times: [10, 60]},
   {id: "EJqo90lNYLs", times: [60, 60]},
   {id: "_hwDdE0Gu4E", times: [10, 60]},
+  {id: "DYAWTcAfHgI", times: [0, 60]},
+  {id: "OGFdcaUC6lI", times: [0, 60]},
+  {id: "ux7gSKl0Tgw", times: [10, 3600]},
+  {id: "R8GlRWPMwFc", times: [10, 45]}
 ];
 
 function pickRandom(array) {
