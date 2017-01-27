@@ -1,14 +1,18 @@
 var videos = [
   {id: "T5Ap6rkyBHY", times: [500, 600]},
   {id: "O5RdMvgk8b0", times: [200, 600]},
-  {id: "UpNTwXycNww", times: [230, 600, 700]},
-  {id: "hdGnUnDwO_8", times: [10]},
-  {id: "EJqo90lNYLs", times: [60]},
-  {id: "_hwDdE0Gu4E", times: [10]},
+  {id: "UpNTwXycNww", times: [230, 600]},
+  {id: "hdGnUnDwO_8", times: [10, 60]},
+  {id: "EJqo90lNYLs", times: [60, 60]},
+  {id: "_hwDdE0Gu4E", times: [10, 60]},
 ];
 
 function pickRandom(array) {
   return array[Math.floor(Math.random() * array.length)];
+}
+
+function randomOnInterval(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
 (function($) {
@@ -36,7 +40,7 @@ function pickRandom(array) {
 
   function playRandomVideo() {
     var video = pickRandom(videos);
-    var time = pickRandom(video.times);
+    var time = randomOnInterval(video.times[0], video.times[1]);
     playVideo(video.id, time);
   }
 
