@@ -52,8 +52,11 @@ function randomOnInterval(min, max) {
     client_id: "6ab048dec3b8ddde4cbbe5b0867b44bb",
   });
 
-  SC.stream("/tracks/122909532").then(function(player){
-    player.play();
+  SC.stream("/tracks/222969505").then(function(player){
+    window.player = player;
+    window.player.play();
+  }).catch(function(err) {
+    console.log("got this here error " + err);
   });
 
   $(function() {
