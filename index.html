@@ -1,37 +1,58 @@
 <!DOCTYPE html>
 <head>
-  <meta charset="utf-8">
-  <title>trippymood</title>
-  <meta name="author" content="Ben Johnson">
-  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+    <meta charset="utf-8">
+    <title>trippymood</title>
+    <meta name="author" content="Ben Johnson">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
 
-  <link href="/css/normalize.css" rel="stylesheet" media="all">
-  <link href="/css/style.css" rel="stylesheet" media="all">
-  <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic|Raleway:400,200,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
-  <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/css/normalize.css" rel="stylesheet" media="all">
+    <link href="/css/bootstrap.min.css" rel="stylesheet" media="all"/>
+    <link href="/css/style.css" rel="stylesheet" media="all">
+    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,900,300italic,400italic,700italic,900italic|Raleway:400,200,300,500,700,600,800,900' rel='stylesheet' type='text/css'>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
 
-  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet" type="text/css">
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="js/device.min.js"></script> <!--OPTIONAL JQUERY PLUGIN-->
+    <script src="js/jquery.mb.YTPlayer.min.js"></script>
+    <script src="js/custom.js"></script>
 
-  <script src="js/jquery-1.11.1.min.js"></script>
-  <script src="js/device.min.js"></script> <!--OPTIONAL JQUERY PLUGIN-->
-  <script src="js/jquery.mb.YTPlayer.min.js"></script>
-  <script src="js/custom.js"></script>
-
-  <meta name="robots" content="noindex,follow" />
+    <meta name="robots" content="noindex,follow" />
 </head>
 
-<body>
-  <section class="big-background">
-    <a id="bgndVideo"
-      class="player"></a> <!-- times: 599-->
-    <div class="pattern"></div> 
-    <div class="big-background-container">
-      <h1 class="big-background-title">Trippymood</h1>
-      <div class="divider"></div>
-      <h2>press any key!</h2>
+<body><!-- Button trigger modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog"  data-bind="modalVisible: showModal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <!-- <div class="modal-header"> -->
+                <!-- <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> -->
+                <!-- <h4 class="modal-title" id="myModalLabel">Modal title</h4> -->
+                <!-- </div> -->
+                <div class="modal-body">
+                    <h1 class="modal-leader">Trippymood</h1>
+                    <p>
+                        Press n for a new video! Trippymood was made with love by <a href="http://ben-johnson.me/">Ben Johnson</a> in Bellingham.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-bind="click: showModal(false)">Close</button>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
-  <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
-  <script src="/js/app.js" type="text/javascript"></script>
+    <section class="big-background">
+        <a id="bgndVideo"
+           class="player"></a> <!-- times: 599-->
+        <div class="pattern"></div>
+        <div class="big-background-container">
+            <h1 class="big-background-title">Trippymood</h1>
+            <div class="divider"></div>
+            <h2>press spacebar to open menu</h2>
+        </div>
+    </section>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.1.2.js"></script>
+    <script src="/js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="/js/knockout.min.js" type="text/javascript"></script>
+    <script src="/js/app.js" type="text/javascript"></script>
 </body>
 </html>

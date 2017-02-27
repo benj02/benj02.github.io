@@ -38,40 +38,41 @@ function randomOnInterval(min, max) {
   return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-(function($) {
-  var firstVideo = true;
-  function playVideo(id, seek) {
-    console.log("playing '" + id + "' at '" + seek + "'");
-    if (firstVideo) {
-      $("#bgndVideo").YTPlayer({
-        videoURL: id,
-        containment: "body",
-        autoPlay: true,
-        quality: "hd720",
-        mute: true,
-        startAt: seek,
-        opacity: 1
-      });
-      firstVideo = false;
-    } else {
-      $("#bgndVideo").YTPChangeMovie({
-        videoURL: id,
-        startAt: seek
-      });
-    }
-  }
 
-  var nextVideo = 0;
-  function playNextVideo() {
-    if (nextVideo === videos.length) {
-      nextVideo = 0;
-      videos = shuffle(videos);
-    }
-    var video = videos[nextVideo++];
-    var time = randomOnInterval(video.times[0], video.times[1]);
-    playVideo(video.id, time);
+var firstVideo = true;
+function playVideo(id, seek) {
+  console.log("playing '" + id + "' at '" + seek + "'");
+  if (firstVideo) {
+    $("#bgndVideo").YTPlayer({
+      videoURL: id,
+      containment: "body",
+      autoPlay: true,
+      quality: "hd720",
+      mute: true,
+      startAt: seek,
+      opacity: 1
+    });
+    firstVideo = false;
+  } else {
+    $("#bgndVideo").YTPChangeMovie({
+      videoURL: id,
+      startAt: seek
+    });
   }
+}
 
+var nextVideo = 0;
+function playNextVideo() {
+  if (nextVideo === videos.length) {
+    nextVideo = 0;
+    videos = shuffle(videos);
+  }
+  var video = videos[nextVideo++];
+  var time = randomOnInterval(video.times[0], video.times[1]);
+  playVideo(video.id, time);
+}
+
+$(function() {
   SC.initialize({
     client_id: "6ab048dec3b8ddde4cbbe5b0867b44bb",
   });
@@ -82,17 +83,45 @@ function randomOnInterval(min, max) {
   }).catch(function(err) {
     console.log("got this here error " + err);
   });
+  // Grab a random video!
+  playNextVideo();
+  setTimeout(function() {
+    $(".pattern").fadeOut(1500);
+    $(".big-background-container").fadeOut(1500);
+  }, 10000);
+});
 
-  $(function() {
-    // Grab a random video!
-    playNextVideo();
-    document.body.addEventListener("keypress", function(e) {
+function AppViewModel() {
+  var self = this;
+  self.showModal = ko.observable(false);
+  document.body.addEventListener("keypress", function(e) {
+    console.log(e.which);
+    if (e.which === 32) {
       console.log("test");
+      self.showModal(!self.showModal());
+    } else if (e.which === 110 || e.which === 78) {
       playNextVideo();
-    });
-    setTimeout(function() {
-      $(".pattern").fadeOut(1500);
-      $(".big-background-container").fadeOut(1500);
-    }, 10000);
+    }
   });
-})(jQuery);
+}
+
+ko.bindingHandlers.modalVisible = {
+  init: function(el, val) {
+    $(el).modal({
+      show: false,
+      backdrop: "static",
+      keyboard: false
+    });
+  },
+
+  update: function(el, val) {
+    if (val()()) {
+      $(el).modal("show");
+    } else {
+      $(el).modal("hide");
+    }
+  }
+};
+
+
+ko.applyBindings(new AppViewModel());

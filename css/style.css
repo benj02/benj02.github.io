@@ -1,5 +1,5 @@
 /*
-Tutorial Name: Modernize Your Site: Building a YouTube Video Background 
+Tutorial Name: Modernize Your Site: Building a YouTube Video Background
 Author: Samuel Dalusung
 */
 
@@ -13,7 +13,7 @@ Author: Samuel Dalusung
 /* GENERAL STYLES
 ================================================== */
 html {
-    height:100%
+    height: 100%;
 }
 
 body {
@@ -23,7 +23,7 @@ body {
     height:100%;
     width:100%;
     background-color: black;
-    color: #fff;
+    /* color: #fff; */
     -webkit-font-smoothing:antialiased;
     -webkit-text-size-adjust:100%
 }
@@ -33,9 +33,12 @@ p {
     font-size:20px;
     line-height:140%;
     text-align:center;
-    color: #fff;
+    /* color: #fff; */
 }
 
+h2 {
+    color: #fff;
+}
 
 ul li {
     display:inline-block;
@@ -57,7 +60,7 @@ ul li {
     position:absolute;
     top:0;
     left:0
-    opacity: 0.5;
+             opacity: 0.5;
 }
 
 .divider {
@@ -75,6 +78,17 @@ ul li {
     font-size:40px
 }
 
+
+/* Modal stuff!! */
+.modal-leader {
+    font-family:'Lobster', cursive;
+    font-size:78px;
+    color:#000;
+    font-weight:300;
+    /*text-transform:uppercase;*/
+    text-align:center;
+
+}
 
 
 /* BIG VIDEO BACKGROUND
@@ -209,7 +223,7 @@ a.about-section-btn {
 
 
 
-/* SMALL VIDEO BACKGROUND 
+/* SMALL VIDEO BACKGROUND
 ================================================== */
 .small-background-section {
     font-family:'Raleway',sans-serif;
@@ -258,33 +272,31 @@ a.about-section-btn {
 ================================================== */
 
 @media screen and (max-width: 768px) {
-.about-section-title {
-    line-height:1
-}
+    .about-section-title {
+        line-height:1
+    }
 }
 
 @media screen and (max-width: 480px) {
-.big-background-title {
-    font-size:58px
-}
+    .big-background-title {
+        font-size:58px
+    }
 
-.small-background-title {
-    line-height:1
-}
+    .small-background-title {
+        line-height:1
+    }
 
-/*.player{ display: none;}  -> If you want to remove the video bg on a specific viewport w/o plugin*/
+    /*.player{ display: none;}  -> If you want to remove the video bg on a specific viewport w/o plugin*/
 }
 
 @media screen and (max-width: 360px) {
-.big-background-title,#colorize {
-    line-height:1
-}
+    .big-background-title,#colorize {
+        line-height:1
+    }
 }
 
 @media screen and (max-width: 320px) {
-.small-background-title {
-    font-size:30px
+    .small-background-title {
+        font-size:30px
+    }
 }
-}
-
-
