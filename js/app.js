@@ -99,7 +99,8 @@ function AppViewModel() {
     if (e.which === 32) {
       console.log("test");
       self.showModal(!self.showModal());
-    } else if (e.which === 110 || e.which === 78) {
+    // } else if (e.which === 110 || e.which === 78) {
+    } else {
       playNextVideo();
     }
   });
