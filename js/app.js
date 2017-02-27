@@ -27,7 +27,6 @@ var videos = shuffle([
   {id: "DYAWTcAfHgI", times: [0, 60]},
   {id: "OGFdcaUC6lI", times: [0, 60]},
   {id: "ux7gSKl0Tgw", times: [10, 3600]},
-  {id: "R8GlRWPMwFc", times: [10, 45]}
 ]);
 
 function pickRandom(array) {
