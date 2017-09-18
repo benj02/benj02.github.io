@@ -21,13 +21,15 @@ var videos = shuffle([
   {id: "T5Ap6rkyBHY", times: [500, 600]},
   {id: "O5RdMvgk8b0", times: [200, 600]},
   {id: "UpNTwXycNww", times: [230, 600]},
-  {id: "hdGnUnDwO_8", times: [10, 60]},
-  {id: "EJqo90lNYLs", times: [60, 60]},
-  {id: "_hwDdE0Gu4E", times: [10, 60]},
-  {id: "DYAWTcAfHgI", times: [0, 60]},
-  {id: "OGFdcaUC6lI", times: [0, 60]},
-  {id: "ux7gSKl0Tgw", times: [10, 3600]},
-  {id: "4rY3X4xafs0", times: [10, 10]}
+  {id: "hdGnUnDwO_8", times: [10,  60]},
+  {id: "EJqo90lNYLs", times: [60,  60]},
+  {id: "_hwDdE0Gu4E", times: [10,  60]},
+  {id: "DYAWTcAfHgI", times: [0,   60]},
+  {id: "OGFdcaUC6lI", times: [0,   60]},
+  {id: "ux7gSKl0Tgw", times: [10,  3600]},
+  {id: "4rY3X4xafs0", times: [10,  10]},
+  {id: "JIpv81BH8Wo", times: [10,  470]},
+  {id: "Z-3z3DNUGiE", times: [30,  90]}
 ]);
 
 function pickRandom(array) {
